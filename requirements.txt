@@ -1,0 +1,8 @@
+lmdb>=1.2.1
+numpy>=1.19.2
+Pillow>=8.4.0
+PyYAML>=6.0
+tqdm>=4.55.1
+opencv_python>=4.5.2.52
+ftfy>=6.0.3
+regex>=2021.10.23
