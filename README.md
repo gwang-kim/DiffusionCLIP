@@ -28,10 +28,11 @@
 
 This repo includes the official PyTorch implementation of DiffusionCLIP, a CLIP-based text-guided image manipulation method for Diffusion models.
 DiffuionCLIP leverages the sampling and inversion processes based on [DDIM](https://arxiv.org/abs/2010.02502) sampling and its reversal,
-which not only accelerate the manipulation but also enable nearly **perfect inversion**. 
+which not only accelerate the manipulation but also enable nearly **perfect inversion**.  
 DiffusonCLIP can perform following tasks. 
 
 * Manipulation of Images in Trained Domain & to Unseen Domain
+  * Our method can even manipulate ImageNet-512 images successfully, which haven't rarely tried due to the diversity of ImageNet images.
 * Image Translation from Unseen Domain into Another Unseen Domain
 * Generation of Images in Unseen Domain from Strokes
 * Multiple attribute changes
@@ -206,6 +207,7 @@ are trained on [AFHQ-Dog](https://arxiv.org/abs/1912.01865), [LSUN-Bedroom](http
 ![](imgs/more_manipulation2.png)
 ![](imgs/more_manipulation3.png)
 ![](imgs/more_manipulation4.png)
+
 [comment]: <> (<p align="center">)
 
 [comment]: <> (  <img src="https://github.com/submission10095/DiffusionCLIP_temp/blob/master/imgs/more_manipulation1.png" />)
