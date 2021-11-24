@@ -32,7 +32,7 @@ which not only accelerate the manipulation but also enable nearly **perfect inve
 DiffusonCLIP can perform following tasks. 
 
 * Manipulation of Images in Trained Domain & to Unseen Domain
-  * Our method can even manipulate ImageNet-512 images successfully, which haven't rarely tried due to the diversity of ImageNet images.
+  * Our method can even manipulate __ImageNet-512 images__ successfully, which haven't rarely tried by GAN inversion methods due to the limited inversion performance which is resulted from the diversity of ImageNet images.
 * Image Translation from Unseen Domain into Another Unseen Domain
 * Generation of Images in Unseen Domain from Strokes
 * Multiple attribute changes
