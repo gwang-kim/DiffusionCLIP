@@ -2,10 +2,15 @@
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1cvb5xZY7NU6tgkpuYwiLIAOr9KPYJkv_)
 
-<p align="center">
-  <img src="https://github.com/submission10095/DiffusionCLIP_temp/blob/master/imgs/main1.png" />
-  <img src="https://github.com/submission10095/DiffusionCLIP_temp/blob/master/imgs/main2.png" />
-</p> 
+[comment]: <> (<p align="center">)
+
+[comment]: <> (  <img src="https://github.com/submission10095/DiffusionCLIP_temp/blob/master/imgs/main1.png" />)
+
+[comment]: <> (  <img src="https://github.com/submission10095/DiffusionCLIP_temp/blob/master/imgs/main2.png" />)
+
+[comment]: <> (</p> )
+![](imgs/main1.png)
+![](imgs/main2.png)
 
 > **DiffusionCLIP: Text-Guided Diffusion Models for Robust Image Manipulation**<br>
 > Annonymous
@@ -38,7 +43,10 @@ models by DiffusionCLIP.
 
 The training process is illustreted in the following figure:
  
-![](imgs/method.png)
+![](imgs/method1.png)
+
+We also propose two fine-tuning scheme. Quick original fine-tuning and GPU-efficient fine-tuning. For more details, please refer to Sec. B.1 in Supplementary Material.
+![](imgs/method2.png)
 
 
 ## Getting Started
@@ -194,10 +202,18 @@ We provide a [Google Drive](https://drive.google.com/drive/folders/1Uwvm_gckanyR
 Here, we show more manipulation of real images in the diverse datasets using DiffusionCLIP where the original pretrained models
 are trained on [AFHQ-Dog](https://arxiv.org/abs/1912.01865), [LSUN-Bedroom](https://www.yf.io/p/lsun) and [ImageNet](https://image-net.org/index.php), respectively.
 
+![](imgs/more_manipulation1.png)
+![](imgs/more_manipulation2.png)
+![](imgs/more_manipulation3.png)
+![](imgs/more_manipulation4.png)
+[comment]: <> (<p align="center">)
 
-<p align="center">
-  <img src="https://github.com/submission10095/DiffusionCLIP_temp/blob/master/imgs/more_manipulation1.png" />
-  <img src="https://github.com/submission10095/DiffusionCLIP_temp/blob/master/imgs/more_manipulation2.png" />
-  <img src="https://github.com/submission10095/DiffusionCLIP_temp/blob/master/imgs/more_manipulation3.png" />
-  <img src="https://github.com/submission10095/DiffusionCLIP_temp/blob/master/imgs/more_manipulation4.png" />
-</p>
+[comment]: <> (  <img src="https://github.com/submission10095/DiffusionCLIP_temp/blob/master/imgs/more_manipulation1.png" />)
+
+[comment]: <> (  <img src="https://github.com/submission10095/DiffusionCLIP_temp/blob/master/imgs/more_manipulation2.png" />)
+
+[comment]: <> (  <img src="https://github.com/submission10095/DiffusionCLIP_temp/blob/master/imgs/more_manipulation3.png" />)
+
+[comment]: <> (  <img src="https://github.com/submission10095/DiffusionCLIP_temp/blob/master/imgs/more_manipulation4.png" />)
+
+[comment]: <> (</p>)
