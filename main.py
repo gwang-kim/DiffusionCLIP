@@ -20,6 +20,7 @@ def parse_args_and_config():
     parser.add_argument('--edit_one_image', action='store_true')
     parser.add_argument('--unseen2unseen', action='store_true')
     parser.add_argument('--clip_finetune_eff', action='store_true')
+    parser.add_argument('--edit_one_image_eff', action='store_true')
 
     # Default
     parser.add_argument('--config', type=str, required=True, help='Path to the config file')
@@ -215,6 +216,8 @@ def main():
             runner.edit_images_from_dataset()
         elif args.edit_one_image:
             runner.edit_one_image()
+        elif args.edit_one_image_eff:
+            runner.edit_one_image_eff()
         elif args.unseen2unseen:
             runner.unseen2unseen()
         else:
