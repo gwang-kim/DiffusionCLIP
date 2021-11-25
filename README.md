@@ -197,7 +197,8 @@ python main.py --unseen2unseen          \
 
 ## Finetuned Models Using DiffuionCLIP
 
-We provide a [Google Drive](https://drive.google.com/drive/folders/1Uwvm_gckanyRzQkVTLB6GLQbkSBoZDZF?usp=sharing) containing several fintuned models using DiffusionCLIP.
+We provide a Google Drive containing several fintuned models using DiffusionCLIP. [Human Face, Dog Face, Church, Bedroom](https://drive.google.com/drive/folders/1Uwvm_gckanyRzQkVTLB6GLQbkSBoZDZF?usp=sharing),
+[ImageNet Style Transfer](https://drive.google.com/drive/folders/1Qb9jcv3Be3k7UtVQykI2PWqznUzb0t8R?usp=sharing), [ImageNet Tennis Ball](https://drive.google.com/drive/folders/1I3rhsPbEkQkWeoGW9kryv8nB_eLeHXfY?usp=sharing)
 
 
 ## Additional Results
