@@ -93,7 +93,7 @@ If you want to use [CelebA-HQ](https://drive.google.com/drive/folders/0B4qLcYyJm
 
 ### Colab Notebook [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1cvb5xZY7NU6tgkpuYwiLIAOr9KPYJkv_)
 We provide a colab notebook for you to play with DiffusionCLIP! Due to 12GB of the VRAM limit in Colab, we only provide the codes of inference & applications with the fine-tuned DiffusionCLIP models, not fine-tuning code. 
-We provide a wide range of types of edits, but you can also upload your fine-tuned models following below instructions on Colab and test them.
+We provide a wide range of types of edits, and you can also upload your fine-tuned models following below instructions on Colab and test them.
 
 
 
