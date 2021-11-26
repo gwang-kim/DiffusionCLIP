@@ -11,6 +11,7 @@ MODEL_PATHS = {
 	'FFHQ': "pretrained/ffhq_10m.pt",
 	'ir_se50': 'pretrained/model_ir_se50.pth',
     'IMAGENET': "pretrained/512x512_diffusion.pt",
+	'shape_predictor': "pretrained/shape_predictor_68_face_landmarks.dat.bz2",
 }
 
 
