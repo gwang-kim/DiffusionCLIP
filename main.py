@@ -29,6 +29,7 @@ def parse_args_and_config():
     parser.add_argument('--comment', type=str, default='', help='A string for experiment comment')
     parser.add_argument('--verbose', type=str, default='info', help='Verbose level: info | debug | warning | critical')
     parser.add_argument('--ni', type=int, default=1,  help="No interaction. Suitable for Slurm Job launcher")
+    parser.add_argument('--align_face', type=int, default=1, help='align face or not')
 
     # Text
     parser.add_argument('--edit_attr', type=str, default=None, help='Attribute to edit defiend in ./utils/text_dic.py')

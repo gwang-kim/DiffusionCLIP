@@ -30,6 +30,18 @@ from configs.paths_config import MODEL_PATHS
 SHAPE_PREDICTOR_PATH = MODEL_PATHS["shape_predictor"]
 
 
+def run_alignment(image_path, output_size):
+    if not os.path.exists("shape_predictor_68_face_landmarks.dat"):
+        print('Downloading files for aligning face image...')
+        os.system(f'wget -P pretrained/ http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2')
+        os.system('bzip2 -dk pretrained/shape_predictor_68_face_landmarks.dat.bz2')
+        print('Done.')
+    predictor = dlib.shape_predictor("pretrained/shape_predictor_68_face_landmarks.dat")
+    aligned_image = align_face(filepath=image_path, predictor=predictor, output_size=output_size, transform_size=output_size)
+    print("Aligned image has shape: {}".format(aligned_image.size))
+    return aligned_image
+
+
 def get_landmark(filepath, predictor):
     """get landmark with dlib
 	:return: np.array shape=(68, 2)

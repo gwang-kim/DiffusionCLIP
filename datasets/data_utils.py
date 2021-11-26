@@ -4,7 +4,7 @@ from .LSUN_dataset import get_lsun_dataset
 from torch.utils.data import DataLoader
 from .IMAGENET_dataset import get_imagenet_dataset
 
-def get_dataset(dataset_type, dataset_paths, config, target_class_num=None):
+def get_dataset(dataset_type, dataset_paths, config, target_class_num=None, gender=None):
     if dataset_type == 'AFHQ':
         train_dataset, test_dataset = get_afhq_dataset(dataset_paths['AFHQ'], config)
     elif dataset_type == "LSUN":
