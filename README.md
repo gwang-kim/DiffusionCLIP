@@ -34,7 +34,7 @@ DiffusionCLIP resolves the critical issues in zero-shot manipulation with the fo
 - We revealed that diffusion model is well suited for image manipulation thanks to its nearly **perfect inversion** capability, which is an important advantage over GAN-based models and hadn't been analyzed in depth before our detailed comparison.
 - Our novel sampling strategies for fine-tuning can preserve perfect reconstruction at **increased speed**.
 - In terms of empirical results, our method enables accurate **in- and out-of-domain manipulation**, minimizes unintended changes, and significantly outperformes SOTA baselines. 
-- Our method takes another step towards general application by manipulating images from a widely varying **ImageNet dataset**.
+- **Our method takes another step towards <span style="color:red">general application</span> by manipulating images from a <span style="color:red">widely varying ImageNet</span> dataset**.
 - Finally, our **zero-shot translation between unseen domains** and **multi-attribute transfer** can effectively reduce manual intervention.
 
 The training process is illustreted in the following figure:
