@@ -1,6 +1,6 @@
-# DiffusionCLIP: Text-Guided Diffusion Models for Robust Image Manipulation
+# DiffusionCLIP: Text-Guided Diffusion Models for Robust Image Manipulation (CVPR 2022) 
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1cvb5xZY7NU6tgkpuYwiLIAOr9KPYJkv_)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1E8QHZ3BbkF6hzk0rRKzhfkySmYf_BZaE?usp=sharing) [![arXiv](https://img.shields.io/badge/arXiv-2110.02711-red)](https://arxiv.org/abs/2110.02711)
 
 <p align="center">
 
@@ -15,8 +15,9 @@
 [comment]: <> (![]&#40;imgs/main2.png&#41;)
 
 > **DiffusionCLIP: Text-Guided Diffusion Models for Robust Image Manipulation**<br>
-> Annonymous
->
+> [Gwanghyun Kim](https://gwang-kim.github.io/), Taesung Kwon, [Jong Chul Ye](https://bispl.weebly.com/professor.html) <br>
+> CVPR 2022
+> 
 >**Abstract**: <br>
 > Recently, GAN inversion methods combined with Contrastive Language-Image Pretraining (CLIP) enables zero-shot image manipulation guided by text prompts. 
 > However, their applications to diverse real images are still difficult due to the limited GAN inversion capability. 
@@ -28,21 +29,13 @@
 
 ## Description
 
-This repo includes the official PyTorch implementation of DiffusionCLIP, a CLIP-based text-guided image manipulation method for Diffusion models.
-DiffuionCLIP leverages the sampling and inversion processes based on [DDIM](https://arxiv.org/abs/2010.02502) sampling and its reversal,
-which not only accelerate the manipulation but also enable nearly **perfect inversion**.  
-DiffusonCLIP can perform following tasks. 
-
-* Manipulation of Images in Trained Domain & to Unseen Domain
-  * Our method can even manipulate __ImageNet-512 images__ successfully, which haven't rarely tried by GAN inversion methods due to the limited inversion performance which is resulted from the diversity of ImageNet images.
-* Image Translation from Unseen Domain into Another Unseen Domain
-* Generation of Images in Unseen Domain from Strokes
-* Multiple attribute changes
-
-With existing works, users often require **the combination of multiple models, tricky task-specific
-loss designs or dataset preparation with large manual effort**. On the other hand, our method is **free
-of such effort** and enables applications in a natural way with the original pretrained and fine-tuned
-models by DiffusionCLIP. 
+This repo includes the official PyTorch implementation of DiffusionCLIP, Text-Guided Diffusion Models for Robust Image Manipulation.
+DiffusionCLIP resolves the critical issues in zero-shot manipulation with the following contributions.
+- We revealed that diffusion model is well suited for image manipulation thanks to its nearly **perfect inversion** capability, which is an important advantage over GAN-based models and hadn't been analyzed in depth before our detailed comparison.
+- Our novel sampling strategies for fine-tuning can preserve perfect reconstruction at **increased speed**.
+- In terms of empirical results, our method enables accurate **in- and out-of-domain manipulation**, minimizes unintended changes, and significantly outperformes SOTA baselines. 
+- Our method takes another step towards general application by manipulating images from a widely varying **ImageNet dataset**.
+- Finally, our **zero-shot translation between unseen domains** and **multi-attribute transfer** can effectively reduce manual intervention.
 
 The training process is illustreted in the following figure:
  
@@ -91,7 +84,7 @@ To manipulate soure images into images in CLIP-guided domain, the **pretrained D
 To precompute latents and fine-tune the Diffusion models, you need about 30+ images in the source domain. You can use both **sampled images** from the pretrained models or **real source images** from the pretraining dataset. 
 If you want to use [CelebA-HQ](https://drive.google.com/drive/folders/0B4qLcYyJmiz0TXY1NG02bzZVRGs?resourcekey=0-arAVTUfW9KRhN-irJchVKQ), [LSUN-Church](https://www.yf.io/p/lsun), [LSUN-Bedroom](https://www.yf.io/p/lsun) and [AFHQ-Dog](https://github.com/clovaai/stargan-v2) and [ImageNet](https://image-net.org/index.php)  datastet directly, you can download them and fill their paths in `./configs/paths_config.py`. 
 
-### Colab Notebook [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1cvb5xZY7NU6tgkpuYwiLIAOr9KPYJkv_)
+### Colab Notebook [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1E8QHZ3BbkF6hzk0rRKzhfkySmYf_BZaE?usp=sharing)
 We provide a colab notebook for you to play with DiffusionCLIP! Due to 12GB of the VRAM limit in Colab, we only provide the codes of inference & applications with the fine-tuned DiffusionCLIP models, not fine-tuning code. 
 We provide a wide range of types of edits, and you can also upload your fine-tuned models following below instructions on Colab and test them.
 
@@ -194,6 +187,36 @@ python main.py --unseen2unseen          \
 - `img_path`: Stroke image or source image in the unseen domain e.g. portrait
 - `n_iter`: # of iterations of stochastic foward and generative processes to translate an unseen source image into the image in the trained domain. It's required to be larger than 8. 
 
+### Multiple Attribute Changes
+![](imgs/app_4_multiple_change.png)
+You can change multiple attributes thorugh only one generative process by mixing the noise from the multipe fintuned models.
+1. Set `HYBRID_MODEL_PATHS` of `HYBRID_CONFIG` in `./configs/paths_config`. The keys of 
+2. Run the commands for above **Manipulation of Images in Trained Domain & to Unseen Domain** with `--hybrid_noise 1`   
+
+```
+HYBRID_MODEL_PATHS = [
+	'curly_hair.pth',
+	'makeup.pth',
+]
+
+HYBRID_CONFIG = \
+	{ 300: [1, 0],**
+	    0: [0.3, 0.7]}
+```
+
+The keys and values of `HYBRID_CONFIG` dictionary correspond to thresholds and ratios for the noise mixing process using multiple models. The following pseudo-code represent the noise mixing process. The full codes are in `./utils/diffusion_utils.py`.
+```
+# models: list of the finetuned diffusion models 
+
+for thr in list(HYBRID_CONFIG.keys()):
+    if t >= thr:
+        et = 0
+        for i, ratio in enumerate(HYBRID_CONFIG[thr]):
+            ratio /= sum(HYBRID_CONFIG[thr])
+            et_i = models[i](xt, t)
+            et += ratio * et_i
+        break
+```
 
 ## Finetuned Models Using DiffuionCLIP
 
