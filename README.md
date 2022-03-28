@@ -224,6 +224,17 @@ We provide a Google Drive containing several fintuned models using DiffusionCLIP
 [ImageNet Style Transfer](https://drive.google.com/drive/folders/1Qb9jcv3Be3k7UtVQykI2PWqznUzb0t8R?usp=sharing), [ImageNet Tennis Ball](https://drive.google.com/drive/folders/1I3rhsPbEkQkWeoGW9kryv8nB_eLeHXfY?usp=sharing)
 
 
+## Citation
+If you find DiffusionCLIP useful in your research, please consider citing:
+
+    @article{kim2021diffusionclip,
+      title={Diffusionclip: Text-guided image manipulation using diffusion models},
+      author={Kim, Gwanghyun and Ye, Jong Chul},
+      journal={arXiv preprint arXiv:2110.02711},
+      year={2021}
+    }
+
+
 ## Additional Results
 
 Here, we show more manipulation of real images in the diverse datasets using DiffusionCLIP where the original pretrained models
