@@ -19,11 +19,12 @@
 > CVPR 2022
 > 
 >**Abstract**: <br>
-> Recently, GAN inversion methods combined with Contrastive Language-Image Pretraining (CLIP) enables zero-shot image manipulation guided by text prompts. 
+Recently, GAN inversion methods combined with Contrastive Language-Image Pretraining (CLIP) enables zero-shot image manipulation guided by text prompts. 
 > However, their applications to diverse real images are still difficult due to the limited GAN inversion capability. 
 > Specifically, these approaches often have difficulties in reconstructing images with novel poses, views, and highly variable contents compared to the training data, altering object identity, or producing unwanted image artifacts. 
 > To mitigate these problems and enable faithful manipulation of real images, we propose a novel method, dubbed DiffusionCLIP, that performs text-driven image manipulation using diffusion models. 
-> Based on full inversion capability and high-quality image generation power of recent diffusion models, our method performs zero-shot image manipulation successfully even between unseen domains. 
+> Based on full inversion capability and high-quality image generation power of recent diffusion models, our method performs zero-shot image manipulation successfully even between unseen domains 
+> and takes another step towards general application by manipulating images from a widely varying ImageNet dataset.
 > Furthermore, we propose a novel noise combination method that allows straightforward multi-attribute manipulation. 
 > Extensive experiments and human evaluation confirmed robust and superior manipulation performance of our methods compared to the existing baselines.
 
