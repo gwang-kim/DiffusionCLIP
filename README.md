@@ -84,7 +84,7 @@ To manipulate soure images into images in CLIP-guided domain, the **pretrained D
 ### Datasets 
 To precompute latents and fine-tune the Diffusion models, you need about 30+ images in the source domain. You can use both **sampled images** from the pretrained models or **real source images** from the pretraining dataset. 
 If you want to use **real source images**,  
-- for [CelebA-HQ](https://drive.google.com/drive/folders/0B4qLcYyJmiz0TXY1NG02bzZVRGs?resourcekey=0-arAVTUfW9KRhN-irJchVKQ), and [AFHQ-Dog](https://github.com/clovaai/stargan-v2)    
+- for [CelebA-HQ](https://drive.google.com/drive/folders/0B4qLcYyJmiz0TXY1NG02bzZVRGs?resourcekey=0-arAVTUfW9KRhN-irJchVKQ), and [AFHQ-Dog](https://github.com/clovaai/stargan-v2), you can use following code:    
 ```
 # CelebA-HQ 256x256
 bash data_download.sh celeba_hq .
