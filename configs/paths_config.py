@@ -1,9 +1,9 @@
 DATASET_PATHS = {
-	'FFHQ': '/data/DiffusionCLIP/celeba_hq/',
-	'CelebA_HQ': '/data/DiffusionCLIP/celeba_hq/',
-	'AFHQ': '/data/DiffusionCLIP/afhq',
-	'LSUN':  '/data/DiffusionCLIP/lsun',
-    'IMAGENET': '/data/DiffusionCLIP/imagenet/',
+	'FFHQ': 'data/celeba_hq/',
+	'CelebA_HQ': 'data/celeba_hq/',
+	'AFHQ': 'data/afhq',
+	'LSUN':  'data/lsun',
+    'IMAGENET': 'data/imagenet/',
 }
 
 MODEL_PATHS = {
