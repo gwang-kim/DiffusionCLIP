@@ -93,7 +93,8 @@ bash data_download.sh celeba_hq .
 bash data_download.sh afhq .
 ```
 - for [LSUN-Church](https://www.yf.io/p/lsun), [LSUN-Bedroom](https://www.yf.io/p/lsun) or [ImageNet](https://image-net.org/index.php), you can download them from the linked original sources and put them in `./data/lsun` or `./data/imagenet`.
-If you want to use custom path, you can modify `./configs/paths_config.py`.
+
+If you want to use custom paths, you can simply modify `./configs/paths_config.py`.
 
 
 ### Colab Notebook [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1E8QHZ3BbkF6hzk0rRKzhfkySmYf_BZaE?usp=sharing)
