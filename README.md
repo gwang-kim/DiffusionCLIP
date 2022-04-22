@@ -38,7 +38,7 @@ DiffusionCLIP resolves the critical issues in zero-shot manipulation with the fo
 - **Our method takes another step towards <span style="color:red">general application</span> by manipulating images from a <span style="color:red">widely varying ImageNet</span> dataset**.
 - Finally, our **zero-shot translation between unseen domains** and **multi-attribute transfer** can effectively reduce manual intervention.
 
-The training process is illustreted in the following figure:
+The training process is illustrated in the following figure. **Once the diffusion model is fine-tuned, any image from the pretrained domain can be manipulated into the corresponding to the target text without re-training**:
  
 ![](imgs/method1.png)
 
