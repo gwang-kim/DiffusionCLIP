@@ -1,6 +1,7 @@
 # DiffusionCLIP: Text-Guided Diffusion Models for Robust Image Manipulation (CVPR 2022) 
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1E8QHZ3BbkF6hzk0rRKzhfkySmYf_BZaE?usp=sharing) [![arXiv](https://img.shields.io/badge/arXiv-2110.02711-red)](https://arxiv.org/abs/2110.02711)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1E8QHZ3BbkF6hzk0rRKzhfkySmYf_BZaE?usp=sharing) [![arXiv](https://img.shields.io/badge/paper-cvpr2022-cyan)](https://openaccess.thecvf.com/content/CVPR2022/html/Kim_DiffusionCLIP_Text-Guided_Diffusion_Models_for_Robust_Image_Manipulation_CVPR_2022_paper.html) [![arXiv](https://img.shields.io/badge/arXiv-2110.02711-red)](https://arxiv.org/abs/2110.02711)
+[![video](https://img.shields.io/badge/video-green)](https://youtu.be/YVCtaXw6fw8) [![poster](https://img.shields.io/badge/poster-orange)](https://drive.google.com/file/d/1QgRFIRba492dCZ6v7BcZB9zqyp91aTjL/view?usp=sharing) 
 
 <p align="center">
 
@@ -248,13 +249,14 @@ Our code strcuture is based on the official codes of [SDEdit](https://github.com
 ## Citation
 If you find DiffusionCLIP useful in your research, please consider citing:
 
-    @article{kim2021diffusionclip,
-      title={Diffusionclip: Text-guided image manipulation using diffusion models},
-      author={Kim, Gwanghyun and Ye, Jong Chul},
-      journal={arXiv preprint arXiv:2110.02711},
-      year={2021}
+    @InProceedings{Kim_2022_CVPR,
+        author    = {Kim, Gwanghyun and Kwon, Taesung and Ye, Jong Chul},
+        title     = {DiffusionCLIP: Text-Guided Diffusion Models for Robust Image Manipulation},
+        booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+        month     = {June},
+        year      = {2022},
+        pages     = {2426-2435}
     }
-
 
 ## Additional Results
 
