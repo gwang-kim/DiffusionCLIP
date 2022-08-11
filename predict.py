@@ -121,6 +121,7 @@ class Predictor(BasePredictor):
         os.makedirs(exp_dir, exist_ok=True)
 
         # Test arg, config
+        align_face = 1 if manipulation == "Human face manipulation" else 0
         n_inv_step = 40
         args_dic = {
             "config": self.configs[manipulation],
@@ -135,7 +136,7 @@ class Predictor(BasePredictor):
             "deterministic_inv": 1,
             "hybrid_noise": 0,
             "n_iter": 1,
-            "align_face": 0,
+            "align_face": align_face,
             "image_folder": exp_dir,
             "model_ratio": degree_of_change,
             "edit_attr": None,

@@ -31,7 +31,7 @@ SHAPE_PREDICTOR_PATH = MODEL_PATHS["shape_predictor"]
 
 
 def run_alignment(image_path, output_size):
-    if not os.path.exists("shape_predictor_68_face_landmarks.dat"):
+    if not os.path.exists("pretrained/shape_predictor_68_face_landmarks.dat"):
         print('Downloading files for aligning face image...')
         os.system(f'wget -P pretrained/ http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2')
         os.system('bzip2 -dk pretrained/shape_predictor_68_face_landmarks.dat.bz2')
