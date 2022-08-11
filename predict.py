@@ -68,8 +68,9 @@ class Predictor(BasePredictor):
                 "Human face manipulation",
                 "Dog face manipulation",
             ],
-            description="Choose a manipulation type. Human face manipulation expects aligned image, pre-process with "
-            "https://replicate.com/cjwbw/face-align-cog for images that are not aligned.",
+            description="Choose a manipulation type."
+            #           " Human face manipulation expects aligned image, pre-process with
+            #"https://replicate.com/cjwbw/face-align-cog for images that are not aligned.",
         ),
         edit_type: str = Input(
             default="ImageNet Style Transfer - Watercolor art",
