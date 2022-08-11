@@ -2,7 +2,7 @@
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1E8QHZ3BbkF6hzk0rRKzhfkySmYf_BZaE?usp=sharing) [![arXiv](https://img.shields.io/badge/paper-cvpr2022-cyan)](https://openaccess.thecvf.com/content/CVPR2022/html/Kim_DiffusionCLIP_Text-Guided_Diffusion_Models_for_Robust_Image_Manipulation_CVPR_2022_paper.html) [![arXiv](https://img.shields.io/badge/arXiv-2110.02711-red)](https://arxiv.org/abs/2110.02711)
 [![video](https://img.shields.io/badge/video-green)](https://youtu.be/YVCtaXw6fw8) [![poster](https://img.shields.io/badge/poster-orange)](https://drive.google.com/file/d/1QgRFIRba492dCZ6v7BcZB9zqyp91aTjL/view?usp=sharing) 
-
+[![Replicate](https://replicate.com/cjwbw/diffusionclip/badge)](https://replicate.com/cjwbw/diffusionclip)
 <p align="center">
 
   <img src="https://github.com/submission10095/DiffusionCLIP_temp/blob/master/imgs/main1.png" />
