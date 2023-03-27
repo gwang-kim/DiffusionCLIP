@@ -1,6 +1,7 @@
 # DiffusionCLIP: Text-Guided Diffusion Models for Robust Image Manipulation (CVPR 2022) 
 
-[![Replicate](https://replicate.com/gwang-kim/diffusionclip/badge)](https://replicate.com/gwang-kim/diffusionclip) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1E8QHZ3BbkF6hzk0rRKzhfkySmYf_BZaE?usp=sharing) [![arXiv](https://img.shields.io/badge/paper-cvpr2022-cyan)](https://openaccess.thecvf.com/content/CVPR2022/html/Kim_DiffusionCLIP_Text-Guided_Diffusion_Models_for_Robust_Image_Manipulation_CVPR_2022_paper.html) [![arXiv](https://img.shields.io/badge/arXiv-2110.02711-red)](https://arxiv.org/abs/2110.02711)
+[![Replicate](https://replicate.com/gwang-kim/diffusionclip/badge)](https://replicate.com/gwang-kim/diffusionclip) [![Open In Spaces](https://camo.githubusercontent.com/00380c35e60d6b04be65d3d94a58332be5cc93779f630bcdfc18ab9a3a7d3388/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f25463025394625413425393725323048756767696e67253230466163652d5370616365732d626c7565)](https://huggingface.co/gwang-kim/DiffusionCLIP-CelebA_HQ)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1n50M3cEGyU6O1DyB791fz43RwnbavPS4?usp=sharing) [![arXiv](https://img.shields.io/badge/paper-cvpr2022-cyan)](https://openaccess.thecvf.com/content/CVPR2022/html/Kim_DiffusionCLIP_Text-Guided_Diffusion_Models_for_Robust_Image_Manipulation_CVPR_2022_paper.html) [![arXiv](https://img.shields.io/badge/arXiv-2110.02711-red)](https://arxiv.org/abs/2110.02711)
 [![video](https://img.shields.io/badge/video-green)](https://youtu.be/YVCtaXw6fw8) [![poster](https://img.shields.io/badge/poster-orange)](https://drive.google.com/file/d/1QgRFIRba492dCZ6v7BcZB9zqyp91aTjL/view?usp=sharing) 
 
 <p align="center">
@@ -98,7 +99,7 @@ bash data_download.sh afhq .
 If you want to use custom paths, you can simply modify `./configs/paths_config.py`.
 
 
-### Colab Notebook [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1E8QHZ3BbkF6hzk0rRKzhfkySmYf_BZaE?usp=sharing)
+### Colab Notebook [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1n50M3cEGyU6O1DyB791fz43RwnbavPS4?usp=sharing)
 We provide a colab notebook for you to play with DiffusionCLIP! Due to 12GB of the VRAM limit in Colab, we only provide the codes of inference & applications with the fine-tuned DiffusionCLIP models, not fine-tuning code. 
 We provide a wide range of types of edits, and you can also upload your fine-tuned models following below instructions on Colab and test them.
 
